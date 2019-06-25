@@ -24,14 +24,14 @@
                         <input type="password" id="inputPassword" name="senha" class="form-control" required="required">
                         <label for="inputPassword">Senha</label>
                         <?php
-                        if(isset($_GET['erro'])) {
+                        if(isset($_GET['error'])) {
                             echo '<p style="color:tomato">Usuário ou senha inválidos.</p>';
                         }
                         ?>
                     </div>
                 </div>
                 <input type="submit" class="btn btn-primary btn-block" value="Login">
-                <a href="<?= SITE_HOME ?>registrar.php"><p>Criar conta</p></a>
+                <p>Não tenho conta, <a href="<?= SITE_HOME ?>registrar.php">Criar conta agora</a></p>
             </form>
         </div>
     </div>

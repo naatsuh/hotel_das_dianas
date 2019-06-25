@@ -4,7 +4,6 @@ class Usuario {
     public $email;
     public $senha;
     public $nome_completo;
-    public $cpf;
     public $telefone;
     public $status;
 }

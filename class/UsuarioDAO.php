@@ -30,7 +30,7 @@ class UsuarioDAO {
     public function login($email, $senha): string {
         $usuario = $this->findByEmail($email);
         if(password_verify($senha, $usuario->senha)) {
-            return $usuario->nome_completo;
+            return $usuario-> nome_completo;
         } else {
             throw new Exception();
         }
@@ -53,13 +53,12 @@ class UsuarioDAO {
     public function store(Usuario $usuario) {
         try {
             $query = $this->conn->prepare(
-                "INSERT INTO usuario (email, senha, nome_completo, cpf, telefone) 
-                            VALUES (:email, :senha, :nome_completo, :cpf, :telefone)");
+                "INSERT INTO usuario (email, senha, nome_completo, telefone) 
+                            VALUES (:email, :senha, :nome_completo, :telefone)");
 
             $query->bindValue(':email', $usuario->email);
             $query->bindValue(':senha', password_hash($usuario->senha, PASSWORD_DEFAULT));
             $query->bindValue(':nome_completo', $usuario->nome_completo);
-            $query->bindValue(':cpf', $usuario->cpf);
             $query->bindValue(':telefone', $usuario->telefone);
 
             $query->execute();
@@ -68,5 +67,6 @@ class UsuarioDAO {
             die($e->getMessage());
         }
     }
+
 }
 ?>

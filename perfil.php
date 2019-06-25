@@ -33,7 +33,7 @@
 
 
 <section>
-    <a id="sair" href="<?= SITE_HOME ?>reservar2.php">Reservas feitas</a>
+    <a id="sair" href="<?= SITE_HOME ?>reservar1.php">Reservar</a>
     <a id="sair" href="?deslogar">Sair</a>
 </section>
 

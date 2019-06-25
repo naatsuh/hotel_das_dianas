@@ -1,7 +1,7 @@
 <?php
 
 
-class Reservas {
+class Quartos {
     public $id;
     public $preco_diaria;
     public $preco_total;
@@ -9,8 +9,6 @@ class Reservas {
     public $saida_data;
     public $de_onde_vem;
     public $pra_onde_vai;
-    public $status;
-    public $id_usuario;
-
+    public $id_quarto;
 }
 ?>

@@ -10,11 +10,12 @@ try {
     $nome = $usuariodao->login($email, $senha);
     session_start();
     session_regenerate_id();
+
     $_SESSION['usuario']['nome'] = $nome;
     $_SESSION['usuario']['email'] = $email;
     $_SESSION['UsuarioLog'] = true;
     header('location: ../reservar.php');
 } catch(Exception $e) {
-    echo "<script>alert('Usuario não encontrado')</script>";
+    header('location: ../login.php?error');
 }
 ?>
